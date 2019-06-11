@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吾能第五次作业</title>
+</head>
+<body>
+<script>
+    // 求100~1000水仙花数
+    function waterflower() {
+    var a,b,c;
+    for(i=100;i<1000;i++){
+        var a = parseInt(i%10); //个位数
+        var b = parseInt((i/10)%10); //十位数
+        var c = parseInt(i/100); //百位数
+        if(a*a*a+b*b*b+c*c*c==i){
+            document.write(i+"是水仙花数"+"</br>");
+        }
+    }
+}
+waterflower();
+// 求斐波那契数列第n项和
+waterflower();
+function squence() {
+    var n = prompt("请输入数字n")
+    var a = 1;
+    var  b= 1;
+    for(var i = 3; i <= n; i++) {
+        var temp = b;
+        b = a + b;
+        a = temp;
+    }
+    document.write("斐波那契数列第n项为"+b)
+}
+squence();
+
+</script>
+</body>
+</html>
